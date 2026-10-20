@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#fff8f7">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Breeze">
+<title>Breeze ♡ New match</title>
+<style>
+:root{--pink:#ef4c83;--ink:#202b49;--muted:#66708b;--line:#f3dce3}
+*{box-sizing:border-box}body{margin:0;background:linear-gradient(135deg,#fffaf7,#fff3f5);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink)}
+header{height:64px;padding:0 clamp(18px,4vw,52px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #f4e5e8;background:#ffffffb8}
+.logo{font-family:Georgia,serif;font-size:32px;font-style:italic;font-weight:bold;color:var(--pink)}.tagline{font-size:13px;color:var(--muted)}
+.ribbon{background:linear-gradient(100deg,#f44e86,#ff7298);color:#fff;text-align:center;font-weight:700;padding:11px 16px;font-size:15px}
+main{max-width:1160px;margin:20px auto;padding:0 16px 28px;display:grid;grid-template-columns:minmax(0,.98fr) minmax(0,1fr);gap:20px}
+.panel{background:#fffdfb;border:1px solid var(--line);border-radius:24px;overflow:hidden;box-shadow:0 10px 35px #a45a6c0a}
+.tabs{display:flex;border-bottom:1px solid var(--line)}.tab{flex:1;border:0;background:none;padding:14px 6px;font:inherit;font-weight:700;font-size:14px;color:var(--muted);cursor:pointer;border-bottom:3px solid transparent}.tab[aria-selected=true]{color:var(--pink);border-color:var(--pink)}
+.slides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;height:330px;position:relative;scrollbar-width:none}.slides::-webkit-scrollbar{display:none}
+.slide{flex:0 0 100%;scroll-snap-align:center;display:grid;place-items:center;background:radial-gradient(circle at 50% 35%,#ffe5ad,#d9a36e 42%,#8b5a46 100%)}.slide.her{background:radial-gradient(circle at 50% 35%,#ffd6e4,#e98aaa 45%,#a04a6b 100%)}.slide img{width:100%;height:100%;object-fit:cover;object-position:center 20%}.slide .em{font-size:140px}
+.photowrap{position:relative}.hint{position:absolute;bottom:12px;left:14px;background:#fffdf0e8;color:#6e4736;padding:6px 11px;border-radius:99px;font-size:12px;font-weight:700}.heart{position:absolute;right:14px;top:14px;background:#fff;border-radius:50%;width:42px;height:42px;display:grid;place-items:center;color:var(--pink);font-size:22px}
+.body{padding:20px 22px 24px}.name{font-size:28px;font-weight:800;letter-spacing:-.7px}.age{font-weight:500;margin-left:8px}.city{color:var(--muted);margin:5px 0 14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px}.chip{background:#ffedf2;color:#b82e60;padding:7px 12px;border-radius:99px;font-size:13px;font-weight:650}
+h2{font-size:18px;margin:18px 0 8px}p{line-height:1.55;margin:10px 0}
+.right{display:grid;gap:16px;align-content:start}.intro{padding:21px 23px;background:linear-gradient(115deg,#ffe6ed,#fff0f3);border-radius:20px}.intro-title{font-size:21px;font-weight:800}.intro .sub{font-weight:650;margin:8px 0}.sail{float:right;font-size:46px;margin:0 5px 0 12px}.awkward{font-size:14px;color:#6c5670}
+.reveal{padding:22px 23px;background:linear-gradient(145deg,#fff0f4,#fffaf9);border-radius:20px;border:1px solid #f8dfe7}.lockline{text-align:center;color:#c83266;font-weight:800;font-size:13px;letter-spacing:.05em}
+.countdown{display:flex;justify-content:center;gap:clamp(8px,2vw,22px);margin:20px 0 8px;text-align:center}.unit strong{display:block;font-size:clamp(26px,3.2vw,42px);font-variant-numeric:tabular-nums}.unit span{font-size:11px;color:#c83266;text-transform:uppercase;letter-spacing:.05em}
+.cap{text-align:center;color:#56617b;font-size:13px;margin:8px 0 4px}
+.plans{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-top:18px;font-size:14px;line-height:1.5}.plan+.plan{border-left:1px solid #efd5dd;padding-left:16px}.ph{font-weight:800;margin-bottom:6px}.pt{font-weight:750;margin-bottom:4px}.plan address{font-style:normal;color:#596580}.plan a{color:#1769a6;font-weight:700}
+.revealed{background:#eaf8f0;border:1px solid #c8ebd7;border-radius:13px;padding:13px;color:#215b40;margin-top:17px;font-size:14px}
+.card{background:linear-gradient(140deg,#edf4ff,#f7f9ff);padding:20px 23px;border-radius:20px}.card h3{margin:0 0 14px;font-size:15px}.steps{display:grid;gap:12px;color:#56617b;font-size:13.5px;line-height:1.45}.step{display:flex;gap:12px}.num{flex:0 0 27px;height:27px;border:1px solid #c8d9ff;border-radius:50%;display:grid;place-items:center;font-weight:800;color:#4d6ba4;background:#fff}
+details{margin-top:12px;font-size:13.5px;color:#56617b}summary{cursor:pointer;font-weight:700;color:#3d568c}details .steps{margin-top:10px}
+.signature{text-align:center;font-family:Georgia,serif;font-style:italic;font-size:20px;margin-top:18px;color:#4a5c87}
+.cta{display:block;width:100%;border:0;border-radius:16px;background:linear-gradient(100deg,#f44e86,#ff7298);padding:18px;color:#fff;font-weight:800;font-size:15px;cursor:pointer;box-shadow:0 8px 18px #e94d8025}.toast{text-align:center;color:#a92b5a;font-size:13px;min-height:18px;margin-top:8px}
+footer{text-align:center;padding:18px;color:#9a8b9a;font-size:12px}
+@media(max-width:760px){main{grid-template-columns:1fr;margin-top:14px;padding:0 12px 24px}.slides{height:300px}.plans{font-size:13px}.plan+.plan{padding-left:11px}}
+</style>
+</head>
+<body>
+<header><div class="logo">Breeze ♡</div><div class="tagline">Same match. New chapter. <span style="color:var(--pink)">♥</span></div></header>
+<div class="ribbon" id="ribbon"></div>
+<main>
+<section class="panel">
+  <div class="tabs" role="tablist"><button class="tab" role="tab" data-t="lion">💘 Matches</button><button class="tab" role="tab" data-t="her">⚓ You</button></div>
+  <div id="pane"></div>
+</section>
+<section class="right">
+  <div class="intro"><span class="sail" aria-hidden="true">⛵</span>
+    <div class="intro-title"><span style="color:var(--pink)">♥</span> Our First Date (Again)</div>
+    <div class="sub">Starting at 18:00 on 22nd October</div>
+  </div>
+  <div class="reveal">
+    <div class="lockline" id="rh"></div>
+    <div class="countdown" id="cd"><div class="unit"><strong id="d">--</strong><span>Days</span></div><div class="unit"><strong id="h">--</strong><span>Hours</span></div><div class="unit"><strong id="m">--</strong><span>Minutes</span></div><div class="unit"><strong id="s">--</strong><span>Seconds</span></div></div>
+    <div class="cap" id="cap"></div>
+    <div id="plans"></div>
+  </div>
+  <div class="card">
+    <h3>🧭 How this works</h3>
+    <div class="steps">
+      <div class="step"><span class="num">1</span><span>Open this link on your phone (Safari or Chrome work best).</span></div>
+      <div class="step"><span class="num">2</span><span>Check out both profiles and get excited.</span></div>
+      <div class="step"><span class="num">3</span><span>The secret unlocks at <strong>6pm on Wednesday 21 October</strong>. Come back then.</span></div>
+      <div class="step"><span class="num">4</span><span>The beginning of our non-toxic era starts now. 💗</span></div>
+    </div>
+    <details open><summary>📲 Save this to your iPhone home screen</summary>
+      <div class="steps">
+        <div class="step"><span class="num">1</span><span>Open this page in <strong>Safari</strong>.</span></div>
+        <div class="step"><span class="num">2</span><span>Tap the <strong>Share</strong> button (square with an arrow). It's at the bottom, or top right on iPad. If you don't see it, tap the <strong>⋯</strong> menu first.</span></div>
+        <div class="step"><span class="num">3</span><span>Scroll down and tap <strong>Add to Home Screen</strong>, then tap <strong>Add</strong>. It now sits on your home screen like an app.</span></div>
+        <div class="step"><span class="num">4</span><span>To bookmark instead: Share → <strong>Add Bookmark</strong>.</span></div>
+      </div>
+    </details>
+    <div class="signature">Same match. New chapter.<br><span style="font-style:normal">♥</span></div>
+  </div>
+  <div><button class="cta" id="acc">♥ &nbsp; See you on the 22nd…</button><div class="toast" id="toast" aria-live="polite"></div></div>
+</section>
+</main>
+<footer>Made with love, a little awkwardness, and a very optimistic captain. ♥</footer>
+<script>
+/* ===== EDIT THIS BLOCK ===== */
+const CONFIG={
+  banner:"💘 It's a match! Same match, new chapter.",   // top banner text
+  revealAt:"2026-10-21T17:00:00Z",   // 18:00 BST on Wed 21 Oct (24h before the 6pm start)
+  drinks:{name:"The Cross Keys",addr:"1 Lawrence Street, Chelsea",time:"6:00 PM"},
+  dinner:{name:"",addr:"",time:"7:30 PM"},   // fill in when booked
+  // slides: image file, optionally "file.jpg|30%" to set the vertical crop; or "emoji:🦁" for a placeholder
+  lion:{name:"Your Lion",age:29,city:"Borehamwood, United Kingdom",slides:["pumpkin.jpg","skydive.jpg","mirror.jpg","wall.jpg","corona.jpg","lion.jpg"],
+    chips:["Football","Skiing","Being shit at golf","Travelling","Scuba diving","Big Shoulders","Being a Lion","Washing up","OCDs","Anxiety"],
+    about:["<strong>Let's hope this one is a bit less awkward than the last one 😅</strong>","Same match, new beginning. Officially opening our <strong>NON-TOXIC ERA</strong> with a proper first date (again). Good vibes only; red flags are staying ashore.","I'm your captain, you're my naughty first mate, so let's set sail on something special. ⚓"]},
+  her:{name:"Pussy Cat",age:"",city:"Edgware Road, Little Morocco",slides:["fan.jpg|30%","flowers.jpg|30%","boat.jpg|35%","eatme.jpg|50%","kitchen.jpg|33%"],
+    chips:["Fashion","Big Brother","Spirituality","Stunningly Beautiful","Creativity","Reading Like a Nerd","Being Perfect","Lateness","Having 50 Morning Alarms","Putting Make up on Men"],
+    about:["I am just the Perfect girl and I am looking for a Top, Top, Top, Top, Top Lion to go on a date with. I just hope he isn't someone who is too affected by Full Moons and who can hold in his farts. I also hope they don't get too annoyed when I ruin their shoes at Pumpkin Patches. We Go!!!!"]}
+};
+/* ===== END EDIT ===== */
+const $=i=>document.getElementById(i);
+const slide=(s,c)=>{if(s.startsWith("emoji:"))return`<div class="slide ${c}"><div class="em">${s.slice(6)}</div></div>`;const[f,p]=s.split("|");return`<div class="slide ${c}"><img src="${f}" alt=""${p?` style="object-position:center ${p}"`:""}></div>`};
+function prof(p,c){return`<div class="photowrap"><div class="slides">${p.slides.map(s=>slide(s,c)).join("")}</div><div class="heart">♥</div>${p.slides.length>1?'<div class="hint">swipe for more →</div>':''}</div>
+<div class="body"><div class="name">${p.name}${p.age?`<span class="age">${p.age}</span>`:''}</div><div class="city">♡ ${p.city}</div>
+<div class="chips">${p.chips.map(x=>`<span class="chip">${x}</span>`).join("")}</div><h2>About me</h2>${p.about.map(x=>`<p>${x}</p>`).join("")}</div>`}
+function tab(t){document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected",b.dataset.t==t));$("pane").innerHTML=prof(CONFIG[t],t)}
+document.querySelectorAll(".tab").forEach(b=>b.onclick=()=>tab(b.dataset.t));
+$("ribbon").textContent=CONFIG.banner;
+const revealAt=new Date(CONFIG.revealAt).getTime(),force=location.search.includes("reveal=1");
+const revealed=()=>force||Date.now()>=revealAt;
+function plan(h,v){return`<div class="plan"><div class="ph">${h}</div><div class="pt">${v.time}</div>${v.name?`<strong>${v.name}</strong><address>${v.addr}</address><a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(v.name+" "+v.addr)}" target="_blank" rel="noopener">Open in Google Maps ↗</a>`:"<em>Location coming soon ⚓</em>"}</div>`}
+function unlock(){$("rh").textContent="🔓 ALL ABOARD";$("cd").hidden=true;$("cap").hidden=true;
+$("plans").innerHTML=`<div class="plans">${plan("🍸 Drinks",CONFIG.drinks)}${plan("🍽️ Dinner",CONFIG.dinner)}</div><div class="revealed"><strong>The secret is out. ♥</strong><br>Your first date (again) awaits, Captain's orders.</div>`}
+let timer;function tick(){if(revealed()){unlock();clearInterval(timer);return}
+const l=revealAt-Date.now();$("d").textContent=Math.floor(l/864e5);$("h").textContent=String(Math.floor(l%864e5/36e5)).padStart(2,"0");$("m").textContent=String(Math.floor(l%36e5/6e4)).padStart(2,"0");$("s").textContent=String(Math.floor(l%6e4/1e3)).padStart(2,"0")}
+$("rh").textContent="🔒 SOMETHING SPECIAL UNLOCKS IN";$("cap").textContent="Every detail stays secret until 6pm on Wednesday 21 October.";
+tick();timer=setInterval(tick,1000);tab("lion");
+$("acc").onclick=()=>{$("toast").textContent="Date accepted, Captain. Non-toxic era: officially boarding. ⚓♥";$("acc").textContent="♥  Match confirmed!"};
+</script>
+</body>
+</html>
